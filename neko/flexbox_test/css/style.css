@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/* main contents */
+body{
+  background-color: rgb(230, 230, 230);
+}
+.wrapper{
+  background-color: white;
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* .boxの共通CSS */
+.box{
+  /* box本体のCSS */
+  width: 300px;
+  height: 200px;
+  background-color: pink;
+  /* 文字色、配置位置設定 */
+  line-height: 200px;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  /* boxどうしの間隔を開ける */
+  margin: 10px;
+}
+
+.box:nth-child(odd){
+    background-color: aquamarine;
+  }
+
+  /* 992px以下は.wrapperの幅を変えます */
+@media screen and (max-width: 991.9px){
+    .wrapper{
+      /* .boxがちょうど２つ収まるように幅を計算 */
+      width: 640px;
+    }
+  }
+
+  /* 768px以下は.wrapperの幅を変えます */
+@media screen and (max-width: 767.9px){
+    .wrapper{
+      width: 320px;
+    }
+  }
