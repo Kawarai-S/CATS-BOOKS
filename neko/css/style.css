@@ -34,6 +34,9 @@ h5 {
   height:100%;
 }
 
+.hover:hover {
+  opacity: 0.7;
+}
 
 .wrap {
   margin: 0 auto;
@@ -146,6 +149,7 @@ h5 {
   height: 300px;
   object-fit: cover;
 }
+
 
 .title__box {
   background-color: #fff;
