@@ -12,21 +12,6 @@
 // });
 // slick有効にすると画像比率がおかしくなる！
 
-// $(function() {
-//   $('a:not([href^="#"]):not([target])').on('click', function(e){
-//       e.preventDefault();
-//       url = $(this).attr('href');
-//       if (url !== '') {
-//           $('body').addClass('is_remove');
-//           setTimeout(function () {
-//               window.location = url;
-//           }, 500);
-//       }
-//       return false;
-//   });
-// });
-
-
 $(function() {
   var $body   = $('body');
   var $btn   = $('.toggle_btn');
