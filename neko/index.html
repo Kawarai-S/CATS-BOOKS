@@ -7,7 +7,6 @@
     <title>CATS & BOOKS</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
@@ -80,12 +79,40 @@
                 <a href=""></a>   
             </div>
             <div class="item box5 hover">
-                <div class="box5__txt">
+                <div>
+                    <img src="img/img-05.png" alt="">
+                </div>
+                <div>
+                    <label class="open" for="pop-up">
+                        <div class="title__box">
+                            <h6>本日の猫占い</h6>
+                        </div>    
+                    </label>
+                    <input type="checkbox" id="pop-up">
+                    <div class="overlay">
+                        <div class="window">
+                            <label class="close" for="pop-up">×</label>
+                            <script type="text/javascript">
+                                var msg = new Array();
+                                msg[0] = '<b>大吉！</b> … 今日はご馳走にありつけるかも？';
+                                msg[1] = '<b>吉！</b> … 優しい人に撫でてもらえるにゃ';
+                                msg[2] = '<b>小吉！</b> … お散歩でもいくにゃ';
+                                msg[3] = '<b>凶！</b> … ご飯でも食べてゴロゴロするにゃ';
+                                msg[4] = '<b>大凶！</b> … 今日は丸くなって寝てるといいにゃ';
+                                var no = Math.floor(Math.random() * msg.length);
+                                document.write(msg[no]);
+                            </script>
+                            <!-- <p class="text">どこの家にも一ぴきゐるが、猫は時計のかはりになりますか。室生犀星「猫のうた」より</p> -->
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- <div class="box5__txt">
                     <p>どこの家にも一ぴきゐるが、</p>
                     <p>猫は時計のかはりになりますか。</p>
                     <p class="name">室生犀星「猫のうた」より</p>
-                </div>
-                <a href=""></a>
+                </div> -->
+                <!-- <a href=""></a> -->
             </div>
             <div class="item box6 hover">
                 <div>
