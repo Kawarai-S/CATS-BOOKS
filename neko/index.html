@@ -10,17 +10,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
     <div class="wrap">
-        <div class="navi">
-            <div>
-                
+        <div id="navArea">
+            <nav>
+              <div class="inner">
+                <ul>
+                  <li><a href="#">CATS & BOOKSについて</a></li>
+                  <li><a href="#">アーカイブ</a></li>
+                  <li><a href="#">お問い合せ</a></li>
+                </ul>
+              </div>
+            </nav>
+          <!-- ハンバーガーボタンをspanで表示する -->
+            <div class="toggle_btn">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
+          <!-- メニューを開いている時だけ背景の色が変化する -->
+            <div id="mask"></div>  
         </div>
+          
         <div class="container">
             <div class="item box1">
                 <div class="title">
@@ -29,12 +46,28 @@
                 <img src="img/img-02.jpg" alt="">
             </div>
             <div class="item box2 hover">
-                <img src="img/img-08.jpg" alt="">
-                <div class="title__box">
-                    <h6>特集</h6>
-                    <h5>猫と暮らした文豪を訪ねて〜谷根千〜</h5>
-                </div>  
-                <a href="#"></a>  
+                <ul class="slider">
+                    <li>
+                        <div>
+                            <img src="img/img-08.jpg" alt="">
+                            <div class="title__box">
+                                <h6>特集</h6>
+                                <h5>猫と暮らした文豪を訪ねて〜谷根千〜</h5>
+                            </div>  
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="img/img-01.jpg" alt="">
+                            <div class="title__box">
+                                <h6>特集</h6>
+                                <h5>猫のいる本屋さん</h5>
+                            </div>
+                            <a href="#"></a>
+                        </div> 
+                    </li>
+                </ul>  
             </div>
             <div class="item box3">
                 <div class="box3__txt">

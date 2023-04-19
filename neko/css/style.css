@@ -19,6 +19,10 @@ h5 {
   line-height: 150%;
 }
 
+li {
+  list-style: none;
+}
+
 .item {
   background-color: #D7BFAF;
   border-radius: 8px;
@@ -54,6 +58,110 @@ h5 {
 .container img {
   border-radius: 8px;
 }
+
+/* navi */
+/*.toggle_btn（ハンバーガーボタン実装）*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 77;
+}
+
+
+/* 三本線 */
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #ccc;
+}
+.open .toggle_btn {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.open .toggle_btn span:nth-child(1){
+  top: 14px;
+  transform: rotate(45deg);
+}
+
+.open .toggle_btn span:nth-child(2){
+  opacity: 0;
+}
+
+.open .toggle_btn span:nth-child(3){
+  top: 14px;
+  transform: rotate(-45deg);
+}
+
+
+/* nav */
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open nav {
+  right: 0;
+  opacity: 1;
+}
+nav .inner {
+  padding: 25px;
+}
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .inner ul li {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+nav .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+
 
 
 /* レイアウト */
@@ -162,7 +270,7 @@ h5 {
 }
 
 /* Responsive */
-@media (max-width: 992px){
+@media screen and (max-width: 992px){
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -172,4 +280,13 @@ h5 {
     grid-row: auto;
   }
 
+  .open .toggle_btn {
+    right: 250px;
+  }
+
+  nav {
+    left: -220px;
+    width: 220px;
+  }
 }
+
