@@ -1,15 +1,16 @@
 // jsを記述する際はここに記載していく
-$(function(){
-  $('.slider').slick({
-    autoplay:true,
-    // dots: true,
-    infinite: true,
-    speed: 2000,
-    fade: true,
-    cssEase: 'linear',
-    arrows: false
-  });
-});
+// $(function(){
+//   $('.slider').slick({
+//     autoplay:true,
+//     // dots: true,
+//     infinite: true,
+//     speed: 2000,
+//     fade: true,
+//     cssEase: 'linear',
+//     arrows: false
+//   });
+// });
+// slick有効にすると画像比率がおかしくなる！
 
 $(function() {
   var $body   = $('body');
@@ -28,4 +29,4 @@ $(function() {
   $mask.on('click', function() {
     $body.removeClass( open );
   });
-} )(jQuery);
+} );
